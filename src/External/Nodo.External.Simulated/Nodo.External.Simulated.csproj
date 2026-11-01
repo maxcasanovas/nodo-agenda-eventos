@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../../BuildingBlocks/Nodo.BuildingBlocks.Application/Nodo.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="../../BuildingBlocks/Nodo.SharedKernel/Nodo.SharedKernel.csproj" />
+    <ProjectReference Include="../../Modules/Quotes/Nodo.Quotes.Contracts/Nodo.Quotes.Contracts.csproj" />
+    <ProjectReference Include="../../Modules/EventLifecycle/Nodo.EventLifecycle.Contracts/Nodo.EventLifecycle.Contracts.csproj" />
+    <ProjectReference Include="../../Modules/HallSchedule/Nodo.HallSchedule.Contracts/Nodo.HallSchedule.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Nodo.Infrastructure.UnitTests" />
+  </ItemGroup>
+
+</Project>

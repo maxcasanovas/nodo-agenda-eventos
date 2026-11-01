@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../../src/Modules/HallSchedule/Nodo.HallSchedule.Domain/Nodo.HallSchedule.Domain.csproj" />
+    <ProjectReference Include="../../../../src/BuildingBlocks/Nodo.BuildingBlocks.Application/Nodo.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="../../../../src/Modules/HallSchedule/Nodo.HallSchedule.Contracts/Nodo.HallSchedule.Contracts.csproj" />
+    <ProjectReference Include="../../../../src/Modules/EventLifecycle/Nodo.EventLifecycle.Contracts/Nodo.EventLifecycle.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

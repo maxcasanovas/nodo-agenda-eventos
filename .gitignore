@@ -1,0 +1,25 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.idea/
+*.log
+TestResults/
+publish/
+
+# Node
+node_modules/
+dist/
+.vite/
+*.tsbuildinfo
+
+# Secrets / local config
+.env
+appsettings.Local.json
+secrets.json
+
+# OS
+.DS_Store
+Thumbs.db

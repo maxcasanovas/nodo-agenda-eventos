@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+    <Using Include="Shouldly" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Shouldly" />
+    <PackageReference Include="NetArchTest.Rules" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/BuildingBlocks/Nodo.BuildingBlocks.Application/Nodo.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="../../src/BuildingBlocks/Nodo.BuildingBlocks.Infrastructure/Nodo.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="../../src/BuildingBlocks/Nodo.SharedKernel/Nodo.SharedKernel.csproj" />
+    <ProjectReference Include="../../src/External/Nodo.External.Simulated/Nodo.External.Simulated.csproj" />
+    <ProjectReference Include="../../src/Modules/EventLifecycle/Nodo.EventLifecycle.Application/Nodo.EventLifecycle.Application.csproj" />
+    <ProjectReference Include="../../src/Modules/EventLifecycle/Nodo.EventLifecycle.Contracts/Nodo.EventLifecycle.Contracts.csproj" />
+    <ProjectReference Include="../../src/Modules/EventLifecycle/Nodo.EventLifecycle.Domain/Nodo.EventLifecycle.Domain.csproj" />
+    <ProjectReference Include="../../src/Modules/EventLifecycle/Nodo.EventLifecycle.Infrastructure/Nodo.EventLifecycle.Infrastructure.csproj" />
+    <ProjectReference Include="../../src/Modules/HallSchedule/Nodo.HallSchedule.Application/Nodo.HallSchedule.Application.csproj" />
+    <ProjectReference Include="../../src/Modules/HallSchedule/Nodo.HallSchedule.Contracts/Nodo.HallSchedule.Contracts.csproj" />
+    <ProjectReference Include="../../src/Modules/HallSchedule/Nodo.HallSchedule.Domain/Nodo.HallSchedule.Domain.csproj" />
+    <ProjectReference Include="../../src/Modules/HallSchedule/Nodo.HallSchedule.Infrastructure/Nodo.HallSchedule.Infrastructure.csproj" />
+    <ProjectReference Include="../../src/Modules/Quotes/Nodo.Quotes.Application/Nodo.Quotes.Application.csproj" />
+    <ProjectReference Include="../../src/Modules/Quotes/Nodo.Quotes.Contracts/Nodo.Quotes.Contracts.csproj" />
+    <ProjectReference Include="../../src/Modules/Quotes/Nodo.Quotes.Domain/Nodo.Quotes.Domain.csproj" />
+    <ProjectReference Include="../../src/Modules/Quotes/Nodo.Quotes.Infrastructure/Nodo.Quotes.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../../../../src/BuildingBlocks/Nodo.BuildingBlocks.Application/Nodo.BuildingBlocks.Application.csproj" />
+  </ItemGroup>
+
+</Project>

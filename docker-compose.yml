@@ -1,0 +1,64 @@
+name: nodo
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: nodo
+      POSTGRES_USER: nodo
+      POSTGRES_PASSWORD: nodo
+    ports:
+      - "5432:5432" # exposed for local development (dotnet run / dotnet ef)
+    volumes:
+      - nodo-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nodo -d nodo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: src/Nodo.Api/Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Docker
+      ConnectionStrings__Nodo: "Host=db;Port=5432;Database=nodo;Username=nodo;Password=nodo"
+      Api__SelfBaseUrl: "http://localhost:8080" # the payment gateway simulator calls our webhook from inside the container
+      Database__MigrateOnStartup: "true"
+      MediatR__LicenseKey: ${MEDIATR_LICENSE_KEY:-}
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 15s
+
+  web:
+    build:
+      context: ./web
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "3000:80"
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    profiles: ["tools"]
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@nodo.local
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  nodo-pgdata:

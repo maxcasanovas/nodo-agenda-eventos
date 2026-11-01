@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" /> <!-- same version as EF Core: Npgsql asks for an older one -->
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="EFCore.NamingConventions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Nodo.BuildingBlocks.Application/Nodo.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="../Nodo.SharedKernel/Nodo.SharedKernel.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../../src/Modules/EventLifecycle/Nodo.EventLifecycle.Application/Nodo.EventLifecycle.Application.csproj" />
+    <ProjectReference Include="../../../../src/BuildingBlocks/Nodo.BuildingBlocks.Infrastructure/Nodo.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="../../../../src/External/Nodo.External.Simulated/Nodo.External.Simulated.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Nodo.Infrastructure.UnitTests" />
+  </ItemGroup>
+
+</Project>

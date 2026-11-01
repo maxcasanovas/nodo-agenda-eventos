@@ -1,0 +1,39 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Nodo.Api/Nodo.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/Nodo.BuildingBlocks.Application/Nodo.BuildingBlocks.Application.csproj" />
+    <Project Path="src/BuildingBlocks/Nodo.BuildingBlocks.Infrastructure/Nodo.BuildingBlocks.Infrastructure.csproj" />
+    <Project Path="src/BuildingBlocks/Nodo.SharedKernel/Nodo.SharedKernel.csproj" />
+  </Folder>
+  <Folder Name="/src/External/">
+    <Project Path="src/External/Nodo.External.Simulated/Nodo.External.Simulated.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/EventLifecycle/">
+    <Project Path="src/Modules/EventLifecycle/Nodo.EventLifecycle.Application/Nodo.EventLifecycle.Application.csproj" />
+    <Project Path="src/Modules/EventLifecycle/Nodo.EventLifecycle.Contracts/Nodo.EventLifecycle.Contracts.csproj" />
+    <Project Path="src/Modules/EventLifecycle/Nodo.EventLifecycle.Domain/Nodo.EventLifecycle.Domain.csproj" />
+    <Project Path="src/Modules/EventLifecycle/Nodo.EventLifecycle.Infrastructure/Nodo.EventLifecycle.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/HallSchedule/">
+    <Project Path="src/Modules/HallSchedule/Nodo.HallSchedule.Application/Nodo.HallSchedule.Application.csproj" />
+    <Project Path="src/Modules/HallSchedule/Nodo.HallSchedule.Contracts/Nodo.HallSchedule.Contracts.csproj" />
+    <Project Path="src/Modules/HallSchedule/Nodo.HallSchedule.Domain/Nodo.HallSchedule.Domain.csproj" />
+    <Project Path="src/Modules/HallSchedule/Nodo.HallSchedule.Infrastructure/Nodo.HallSchedule.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/Modules/Quotes/">
+    <Project Path="src/Modules/Quotes/Nodo.Quotes.Application/Nodo.Quotes.Application.csproj" />
+    <Project Path="src/Modules/Quotes/Nodo.Quotes.Contracts/Nodo.Quotes.Contracts.csproj" />
+    <Project Path="src/Modules/Quotes/Nodo.Quotes.Domain/Nodo.Quotes.Domain.csproj" />
+    <Project Path="src/Modules/Quotes/Nodo.Quotes.Infrastructure/Nodo.Quotes.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Nodo.ArchitectureTests/Nodo.ArchitectureTests.csproj" />
+    <Project Path="tests/Nodo.EventLifecycle.UnitTests/Nodo.EventLifecycle.UnitTests.csproj" />
+    <Project Path="tests/Nodo.HallSchedule.UnitTests/Nodo.HallSchedule.UnitTests.csproj" />
+    <Project Path="tests/Nodo.Infrastructure.UnitTests/Nodo.Infrastructure.UnitTests.csproj" />
+    <Project Path="tests/Nodo.Quotes.UnitTests/Nodo.Quotes.UnitTests.csproj" />
+    <Project Path="tests/Nodo.SharedKernel.UnitTests/Nodo.SharedKernel.UnitTests.csproj" />
+  </Folder>
+</Solution>
